@@ -1,0 +1,29 @@
+What is Angular?
+- A Platform : to design a modern web apps.
+- A Framework : not a library.
+- Cross Platform : The app designed in Angular can work on web as well as mobile.
+- SPAs (Single Page Applications) : When the user clicks on any link, the page does not reload but a part of the page loads.
+- Part of MEAN stack.
+- Not a library, Plugin, extension, package.
+
+TypeScript?
+- Super set of JS.
+- Includes optional static typing to JS.
+- It compiles to JS basically.
+- Created & maintained by MS.
+
+Architecture Overview:
+- Modules
+- Components
+- Templates
+- Metadata
+- Data Bindings
+
+Ng Module?
+- in app.module.ts
+- Angular apps are modular called NgModule
+- Atleast one module named AppModule
+- Class with @NgModule Decorator (decorators, part of TS, are functions that modify JS classes)
+
+Components?
+- A class which interact with View
