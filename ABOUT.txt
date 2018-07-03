@@ -29,3 +29,12 @@ Components?
 - A class which interact with View
 - Perform app logic
 - There are many life cycle hooks
+
+Templates?
+- Tell Angular. how to render component
+- Same as HTML but with some differences
+
+Metadata?
+- Tell Angular how to process class
+- Attach metadata via Decorators
+- @component decorator, identify class immediately below it
