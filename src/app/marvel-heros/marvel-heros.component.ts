@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelHerosComponent implements OnInit {
 
+  hero = 'Iron Man';
+
   constructor() { }
 
   ngOnInit() {
