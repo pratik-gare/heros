@@ -27,3 +27,5 @@ Ng Module?
 
 Components?
 - A class which interact with View
+- Perform app logic
+- There are many life cycle hooks
