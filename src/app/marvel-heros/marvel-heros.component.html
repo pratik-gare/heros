@@ -2,20 +2,27 @@
   <div class="col-4 offset-4">
     <ul class="list-group">
         <!-- data binding (from Component to DOM)-->
-        <li class="list-group-item">{{ hero }}</li>
+        <li class="list-group-item" *ngFor="let hero of heros" [ngClass] = "{
+          'text-success' : hero === 'hulk' }">{{ hero }}</li>
         
-        <!-- ng-model binding (from Component to DOM and from DOM to Component, both ways) -->
+
         <li class="list-group-item">
-          <input type="text" class="form-control" [(ngModel)]="inputHero">
+          <button class="btnbtn-info" (click)="AddMore()">Add More</button>
         </li>
+
+        
         <!-- <li class="list-group-item">
           {{ inputHero }}
         </li> -->
         
-        <li class="list-group-item">
+        <li class="list-group-item" *ngIf="Adding">
+
+          <!-- ng-model binding (from Component to DOM and from DOM to Component, both ways) -->
+          <input type="text" class="form-control" [(ngModel)]="inputHero">
+          <br>          
           <!-- property binding: [propertyName]=variable/object in components.ts  (from Component to DOM) -->
           <!-- event handling: (eventName) = "handlerFunction()"  (from DOM to Component) -->
-          <button class="btn btn-success" [disabled]="!inputHero" (click)="ChangeHero()">Change my hero</button>
+          <button class="btn btn-success" [disabled]="!inputHero" (click)="AddHero()">Add Hero</button>
         </li>
         
       </ul>
