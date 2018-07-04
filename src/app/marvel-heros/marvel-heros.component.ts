@@ -9,6 +9,13 @@ export class MarvelHerosComponent implements OnInit {
 
   hero = 'Iron Man';
 
+  //property binding
+  btnDisabled = false;
+
+  ChangeHero(){
+    this.hero = "Black Panther";
+  }
+
   constructor() { }
 
   ngOnInit() {

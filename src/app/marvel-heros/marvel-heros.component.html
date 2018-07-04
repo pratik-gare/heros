@@ -1,7 +1,22 @@
-<p>
-  <!-- data binding -->
-  {{ hero }}
+<div class="row">
+  <div class="col-4 offset-4">
+    <ul class="list-group">
+        <!-- data binding (from Component to DOM)-->
+        <li class="list-group-item">{{ hero }}</li>
+        
+        <!-- ng-model binding (from Component to DOM and from DOM to Component, both ways) -->
+        <li class="list-group-item">
+          <input type="text" class="form-control">
+        </li>
+        
+        <li class="list-group-item">
+          <!-- property binding: [propertyName]=variable/object in components.ts  (from Component to DOM) -->
+          <!-- event handling: (eventName) = "handlerFunction()"  (from DOM to Component) -->
+          <button class="btn btn-success" [disabled]=btnDisabled (click)="ChangeHero()">Change my hero</button>
+        </li>
+        
+      </ul>
+  </div>
 
-  <button class="btn btn-success">Show More</button>
+</div>
 
-</p>
