@@ -12,8 +12,11 @@ export class MarvelHerosComponent implements OnInit {
   //property binding
   btnDisabled = false;
 
+  inputHero = null;
+
   ChangeHero(){
-    this.hero = "Black Panther";
+    this.hero = this.inputHero;
+    this.inputHero = null;
   }
 
   constructor() { }
