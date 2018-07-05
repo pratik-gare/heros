@@ -4,16 +4,31 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MarvelHerosComponent } from './marvel-heros/marvel-heros.component';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { DcComicsComponent } from './dc-comics/dc-comics.component'
+
+import { RouterModule, Routes } from '@angular/router';
+
+
+const routeLists: Routes = [
+  {
+    path: "", component: DcComicsComponent
+  },
+  {
+    path: "marvels", component: MarvelHerosComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarvelHerosComponent
+    MarvelHerosComponent,
+    DcComicsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routeLists)
   ],
   providers: [],
 
