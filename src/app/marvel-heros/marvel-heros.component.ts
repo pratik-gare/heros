@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroService } from './marvel-hero.service';
 
 @Component({
   selector: 'app-marvel-heros',
   templateUrl: './marvel-heros.component.html',
-  styleUrls: ['./marvel-heros.component.css']
+  styleUrls: ['./marvel-heros.component.css'],
+  providers: [HeroService]
 })
 export class MarvelHerosComponent implements OnInit {
-
-  heros = ['Iron Man', 'Spiderman', 'Black Panther', 'Ant Man'];
 
   //property binding
   btnDisabled = false;
@@ -15,6 +15,9 @@ export class MarvelHerosComponent implements OnInit {
   inputHero = null;
 
   Adding = false;
+
+  //service
+  heros:string[];
 
   AddHero() {
     this.heros.push(this.inputHero);
@@ -26,7 +29,10 @@ export class MarvelHerosComponent implements OnInit {
     this.Adding = !this.Adding;
   }
 
-  constructor() { }
+  // dependency injection
+  constructor(private ajax: HeroService) {
+    this.heros = this.ajax.heros;
+  }
 
   ngOnInit() {
   }

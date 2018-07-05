@@ -44,3 +44,7 @@ Directives?
 - Structural directive and attribute directive
 - Structural: *ngFor and *ngIf
 - Attribute: ngModel, ngClass, ngStyle
+
+Services and Dependency Injection?
+- A service is a class, with a narrow or well defined purpose
+- Not forced but recommended

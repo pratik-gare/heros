@@ -2,8 +2,9 @@
   <div class="col-4 offset-4">
     <ul class="list-group">
       <!-- data binding (from Component to DOM)-->
+      <!-- pipe: used for filters, cases, etc -->
       <li class="list-group-item" *ngFor="let hero of heros" [ngClass] = "{
-        'text-success' : hero === 'hulk' }">{{ hero }}</li>
+        'text-success' : hero === 'hulk' }">{{ hero | uppercase}}</li>
       <li class="list-group-item">
         <button class="btnbtn-info" (click)="AddMore()">Add More</button>
       </li>
